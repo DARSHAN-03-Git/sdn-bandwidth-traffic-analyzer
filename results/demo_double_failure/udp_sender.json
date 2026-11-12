@@ -1,0 +1,13 @@
+{
+  "role": "sender",
+  "destination_host": "10.0.0.2",
+  "port": 5005,
+  "duration_seconds": 35.0,
+  "target_packets_per_second": 500.0,
+  "payload_size_bytes": 800,
+  "sent_packets": 17500,
+  "sent_payload_bytes": 14000000,
+  "measurement_span_seconds": 35.00072196600013,
+  "send_throughput_mbps": 3.1999339930415536,
+  "finished_unix_time": 1794218540.2459056
+}

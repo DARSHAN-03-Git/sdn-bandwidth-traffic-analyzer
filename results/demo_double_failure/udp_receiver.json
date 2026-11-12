@@ -1,0 +1,26 @@
+{
+  "role": "receiver",
+  "listen_host": "0.0.0.0",
+  "port": 5005,
+  "duration_seconds": 45.0,
+  "received_packets": 13469,
+  "received_payload_bytes": 10775200,
+  "unique_sequence_numbers_received": 13469,
+  "missing_ranges": [
+    [
+      4963,
+      4972,
+      10
+    ],
+    [
+      6979,
+      10999,
+      4021
+    ]
+  ],
+  "first_sequence": 0,
+  "last_sequence": 17499,
+  "measurement_span_seconds": 34.999834060668945,
+  "receive_throughput_mbps": 2.462914534125435,
+  "finished_unix_time": 1794218550.303766
+}

@@ -1,0 +1,19 @@
+metric,application_value,sdn_value_or_note
+sent_packets,17500,UDP sender
+received_packets,13469,UDP receiver
+estimated_lost_packets,4031,sent - received
+estimated_packet_loss_percent,23.034,percentage of sent packets not received
+sender_throughput_mbps,3.199934,application payload bytes
+receiver_throughput_mbps,2.462915,application payload bytes
+sdn_flow,10.0.0.1->10.0.0.2,IPv4 flow rows only; table-miss rows excluded
+sdn_switches_that_carried_flow,"s1,s2,s3,s4",switches with packet counts > 0 in the test window
+sdn_s1_packets,12747,flow-counter delta in test window
+sdn_s1_bytes,10732230,includes Ethernet/IP/UDP headers (payload + 42 B per packet)
+sdn_s2_packets,9201,flow-counter delta in test window
+sdn_s2_bytes,7746498,includes Ethernet/IP/UDP headers (payload + 42 B per packet)
+sdn_s3_packets,3530,flow-counter delta in test window
+sdn_s3_bytes,2972260,includes Ethernet/IP/UDP headers (payload + 42 B per packet)
+sdn_s4_packets,12733,flow-counter delta in test window
+sdn_s4_bytes,10720442,includes Ethernet/IP/UDP headers (payload + 42 B per packet)
+loss_burst_1,10,"packets 4963-4972, starts about 9.9s after sender start, lasts about 0.02s"
+loss_burst_2,4021,"packets 6979-10999, starts about 14.0s after sender start, lasts about 8.04s"

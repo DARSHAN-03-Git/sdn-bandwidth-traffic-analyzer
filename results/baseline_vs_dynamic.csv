@@ -1,0 +1,4 @@
+approach,failed_link,runs,sent_packets,lost_packets,loss_percent,outage_seconds
+static,s1-s2,1,17500,6022,34.411,12.04
+dynamic,s1-s2,4,69868,168,0.240,0.02-0.22
+dynamic,s2-s4,1,17480,15,0.086,0.03
