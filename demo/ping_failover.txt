@@ -1,0 +1,11 @@
+h1 ip neigh flush all
+h2 ip neigh flush all
+h1 ping -c 3 h2
+link s1 s2 down
+h1 ip neigh flush all
+h2 ip neigh flush all
+h1 ping -c 10 h2
+link s1 s2 up
+h1 ip neigh flush all
+h2 ip neigh flush all
+h1 ping -c 10 h2

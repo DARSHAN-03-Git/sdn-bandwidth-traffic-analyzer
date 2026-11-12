@@ -1,0 +1,3 @@
+h1 ping -c 3 h2
+sh sleep 20
+h1 ping -c 3 h2

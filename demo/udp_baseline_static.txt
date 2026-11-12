@@ -1,0 +1,8 @@
+h1 ping -c 2 h2
+h2 python3 udp_receiver.py --duration 45 --output results/baseline_static/udp_receiver.json &
+h1 python3 udp_sender.py --duration 35 --output results/baseline_static/udp_sender.json &
+sh sleep 10
+link s1 s2 down
+sh sleep 12
+link s1 s2 up
+sh sleep 30

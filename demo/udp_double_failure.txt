@@ -1,0 +1,12 @@
+h1 ping -c 2 h2
+h2 python3 udp_receiver.py --duration 45 --output results/demo_double_failure/udp_receiver.json &
+h1 python3 udp_sender.py --duration 35 --output results/demo_double_failure/udp_sender.json &
+sh sleep 10
+link s1 s2 down
+sh sleep 4
+link s1 s3 down
+sh sleep 8
+link s1 s3 up
+sh sleep 4
+link s1 s2 up
+sh sleep 25

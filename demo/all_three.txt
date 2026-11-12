@@ -1,0 +1,19 @@
+h1 ping -c 2 h2
+h2 python3 udp_receiver.py --duration 30 --output results/demo_primary/udp_receiver.json &
+h1 python3 udp_sender.py --duration 20 --output results/demo_primary/udp_sender.json
+sh sleep 12
+h1 ping -c 2 h2
+h2 python3 udp_receiver.py --duration 20 --output results/demo_load/load_1000_r.json &
+h1 python3 udp_sender.py --duration 10 --pps 1000 --output results/demo_load/load_1000_s.json
+sh sleep 12
+h2 python3 udp_receiver.py --duration 20 --output results/demo_load/load_3000_r.json &
+h1 python3 udp_sender.py --duration 10 --pps 3000 --output results/demo_load/load_3000_s.json
+sh sleep 12
+h1 ping -c 2 h2
+h2 python3 udp_receiver.py --duration 45 --output results/demo_failover_s1s2/udp_receiver.json &
+h1 python3 udp_sender.py --duration 35 --output results/demo_failover_s1s2/udp_sender.json &
+sh sleep 10
+link s1 s2 down
+sh sleep 12
+link s1 s2 up
+sh sleep 30
